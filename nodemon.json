@@ -1,0 +1,13 @@
+{
+  "restartable": "rs",
+  "ignore": [".git", "node_modules/**/node_modules"],
+  "verbose": true,
+  "events": {
+    "start": "clear",
+    "restart": "kill-port 5000",
+    "crash": "kill-port 5000"
+  },
+  "watch": ["src", "server.js", "config", "client", "webpack.config.js"],
+  "ext": "js, json, css, html, ejs",
+  "exec": "npm run start"
+}

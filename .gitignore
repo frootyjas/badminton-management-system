@@ -1,0 +1,61 @@
+# Node.js specific
+node_modules/
+npm-debug.log
+yarn-error.log
+yarn-debug.log*
+package-lock.json
+yarn.lock
+
+# Environment files
+.env
+.env.*
+.env.local
+.env.*.local
+
+# Ignore generated assets
+public/*.css
+public/*.js
+public/*.map
+!/public/error.css
+!/public/leaflet.css
+test/
+
+# Logs
+logs/
+*.log
+pids/
+*.pid
+*.seed
+
+# Runtime data
+pids/
+*.pid
+*.seed
+
+# Dependency directories
+jspm_packages/
+
+# IDEs and editors
+.vscode/
+.idea/
+*.suo
+*.ntvs_analysis.dat
+*.ncb
+*.swp
+
+# Build outputs
+dist/
+build/
+out/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+
+# Others
+*.bak
+*.swp
