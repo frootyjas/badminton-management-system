@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reservation Confirmation</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f9;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 30px auto;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+      }
+
+      .header {
+        background-color: #007bff;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+      }
+
+      .header h1 {
+        margin: 0;
+        font-size: 24px;
+      }
+
+      .content {
+        padding: 20px;
+        text-align: center;
+      }
+
+      .content p {
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+
+      .content strong {
+        color: #4caf50;
+      }
+
+      .footer {
+        background-color: #f4f4f9;
+        color: #888;
+        font-size: 14px;
+        text-align: center;
+        padding: 10px;
+        border-top: 1px solid #e6e6e6;
+      }
+
+      .button {
+        display: inline-block;
+        margin: 20px 0;
+        padding: 10px 20px;
+        font-size: 16px;
+        color: #fff;
+        background-color: #007bff;
+        text-decoration: none;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: opacity 0.3s;
+      }
+
+      .button:hover {
+        opacity: 0.8;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Reservation Confirmed!</h1>
+      </div>
+      <div class="content">
+        <p>
+          Dear
+          <strong>[USER_NAME_PLACEHOLDER]</strong>
+          ,
+        </p>
+        <p>
+          Your reservation for the court
+          <strong>[COURT_NAME_PLACEHOLDER]</strong>
+          on
+          <strong>[RESERVATION_DATE_PLACEHOLDER]</strong>
+          has been successfully confirmed.
+        </p>
+        <p>We look forward to seeing you!</p>
+        <a href="[RESERVATION_URL_PLACEHOLDER]" class="button">View My Reservations</a>
+      </div>
+      <div class="footer">
+        <p>Thank you for choosing our service!</p>
+        <p>&copy; 2024 Bataan Badminton Court Team</p>
+      </div>
+    </div>
+  </body>
+</html>

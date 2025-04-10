@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order Confirmation</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        color: #333;
+      }
+      .email-container {
+        max-width: 600px;
+        margin: 20px auto;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      .header {
+        background-color: #007bff;
+        color: white;
+        text-align: center;
+        padding: 15px 0;
+        font-size: 24px;
+      }
+      .content {
+        padding: 20px;
+      }
+      .shop-name {
+        font-weight: bold;
+        color: #4caf50;
+      }
+      .order-details {
+        margin-bottom: 20px;
+      }
+      .order-details table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      .order-details th,
+      .order-details td {
+        padding: 10px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+      .order-details th {
+        background-color: #f4f4f4;
+      }
+      .total {
+        font-weight: bold;
+        color: #4caf50;
+        text-align: right;
+        margin-top: 10px;
+      }
+      .footer {
+        background-color: #f4f4f4;
+        text-align: center;
+        padding: 10px;
+        font-size: 14px;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="email-container">
+      <div class="header">Order Confirmation</div>
+      <div class="content">
+        <p>
+          Hi
+          <strong>[CUSTOMER_NAME]</strong>
+          ,
+        </p>
+        <p>
+          Thank you for your order from
+          <span class="shop-name">[SHOP_NAME]</span>
+          ! Here are the details:
+        </p>
+        <div class="order-details">
+          <table>
+            <thead>
+              <tr>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Total</th>
+              </tr>
+            </thead>
+            <tbody>[PRODUCT_ROWS]</tbody>
+          </table>
+        </div>
+        <p class="total">Grand Total: ₱[TOTAL_AMOUNT]</p>
+        <p>If you have any questions, feel free to contact us.</p>
+      </div>
+      <div class="footer">&copy; 2024 Bataan Badminton Court Team.</div>
+    </div>
+  </body>
+</html>

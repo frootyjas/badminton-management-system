@@ -1,0 +1,57 @@
+<body>
+  <div class="main-content">
+    <div class="browse-products">
+      <h1>Browse Products</h1>
+      <div class="icon-container">
+        <span class="cart-icon" id="cart-icon">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="badge" id="cart-item-count">0</span>
+        </span>
+        <a href="/user/products/order-list">
+          <span class="order-list-icon" id="order-list-icon">
+            <i class="fas fa-list"></i>
+          </span>
+        </a>
+      </div>
+    </div>
+    <div class="search-bar">
+      <div class="search-input-container">
+        <input type="text" id="search-bar" placeholder="Search products..." />
+        <button id="clear-search">
+          <i class="fas fa-times"></i>
+          <!-- FontAwesome "times" icon -->
+        </button>
+      </div>
+      <select id="category-filter">
+        <option value="">All Categories</option>
+        <option value="Shoes">Shoes</option>
+        <option value="Racket">Racket</option>
+        <option value="Apparel">Apparel</option>
+        <option value="Bag">Bag</option>
+        <option value="Shuttlecock">Shuttlecock</option>
+      </select>
+      <select id="shop-filter"></select>
+    </div>
+
+    <div class="product-list" id="product-list">
+      <!-- Product Cards will be dynamically inserted here -->
+    </div>
+
+    <div class="cart" id="cart">
+      <div class="close-btn" id="close-cart">&times;</div>
+      <h2>Your Cart</h2>
+      <div class="items" id="cart-items">
+        <table class="cart-table">
+          <!-- Cart items will be dynamically inserted here -->
+        </table>
+      </div>
+      <div class="total-price" id="total-price">Total: ₱0</div>
+      <div class="buttons">
+        <button id="clear-cart">Clear Cart</button>
+        <button id="checkout">Proceed to Checkout</button>
+        <br />
+        <br />
+      </div>
+    </div>
+  </div>
+</body>

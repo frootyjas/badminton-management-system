@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin: 0 auto;
+  margin-top: 70px;
+  padding: 20px;
+  width: 100%;
+  max-width: 1300px;
+}
+/* Styling for the main content and header */
+.main-content h1 {
+  font-size: 21px;
+  margin: 0; /* Remove any default margin for h1 */
+  display: inline-block;
+}
+
+/* Style for the browse-products container */
+.browse-products {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #e0e0e0;
+  }
+  
+  thead th {
+    padding: 10px;
+    background-color: #192850;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    border-right: 1px solid #e0e0e0;
+  }
+  
+  thead th:last-child {
+    border-right: none;
+  }
+  
+  tbody td {
+    padding: 10px;
+    text-align: center;
+    border-top: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+  }
+  
+  tbody tr td:last-child {
+    border-right: none;
+  }
+  
+  tbody tr:last-child td {
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #fff;
+  }
+  
+  .filter-actions {
+    display: flex;
+    align-items: center;
+  }
+  
+  .filter-container select {
+    padding: 10px 20px;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    background-color: #eee;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+  }
+  
+  .filter-container button {
+    margin-left: 10px;
+  }
+  
+  .filter-container label {
+    margin-right: 10px;
+  }
+  
+  .search-field {
+    padding: 10px 20px;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    background-color: #eee;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    transition: background-color 0.3s;
+  }
+  
+  .search-field:focus {
+    outline-color: #000;
+  }
+  
+  .view-schedule-button:hover {
+    background-color: #66bb6a;
+  }
+  
+  .action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .icon-button {
+    background: none;
+    border: none;
+    color: #142850;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 5px;
+    transition: color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .icon-button:hover {
+    color: #397cf7;
+    transform: scale(1.1);
+  }
+  
+  .view-schedule i {
+    color: #28a745;
+  }
+  
+  .edit-status i {
+    color: #007bff;
+  }
+  
+  th {
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .sort-icon {
+    margin-left: 5px;
+    visibility: hidden;
+  }
+  
+  th:hover .sort-icon {
+    visibility: visible;
+  }
+  
+  .sort-asc:after {
+    content: '\f0de';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    margin-left: 5px;
+  }
+  
+  .sort-desc:after {
+    content: '\f0de';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    margin-left: 5px;
+    transform: rotate(180deg);
+  }
+  
+  

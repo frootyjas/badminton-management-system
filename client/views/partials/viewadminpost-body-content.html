@@ -1,0 +1,179 @@
+<body>
+  <section class="home-section">
+    <h1>Manage Posts</h1>
+    <div class="content-section">
+      <div class="caa-wrapper">
+        <div class="filter-buttons">
+          <div class="left-buttons">
+            <button class="active">All</button>
+            <button>Announcements</button>
+            <button>Events and Tournaments</button>
+            <button id="add-post" class="plus-button"><i class="fas fa-plus"></i></button>
+          </div>
+        </div>
+        <div class="box">
+          <!--  dynamically create a post -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="addModal" class="modal">
+      <div class="modal-content-createpost">
+        <h2>Add New Post</h2>
+
+        <label for="category">Select Category:</label>
+        <select id="category" required>
+          <option value="announcement">Announcement</option>
+          <option value="event">Event and Tournament</option>
+        </select>
+
+        <!-- Common Fields -->
+        <div id="common-fields">
+          <label for="heading">Heading</label>
+          <input type="text" id="heading" placeholder="Type here" />
+          <label for="details">Details</label>
+          <textarea id="details" rows="4" placeholder="Type here"></textarea>
+        </div>
+
+        <!-- Event Fields -->
+        <div id="event-fields" style="display: none">
+          <label for="start-date">Start Date</label>
+          <input type="date" id="start-date" />
+
+          <label for="end-date">End Date</label>
+          <input type="date" id="end-date" />
+
+          <label for="reservationFee">Reservation Fee (optional)</label>
+          <input type="number" id="reservationFee" placeholder="Enter reservation fee" />
+
+          <!-- Fee Inputs with Unique IDs -->
+
+          <!-- Fee Inputs with Unique IDs -->
+          <label for="eventFee">Event Fee (optional)</label>
+          <input type="number" id="eventFee" placeholder="Enter event fee" />
+
+          <label for="participantLimit">Participant Limit</label>
+          <input type="number" id="participantLimit" placeholder="Enter participant limit" />
+        </div>
+
+        <!-- Tournament Fields -->
+        <div id="tournament-fields" style="display: none">
+          <label for="start-date">Start Date</label>
+          <input type="date" id="tournament-start-date" />
+
+          <label for="end-date">End Date</label>
+          <input type="date" id="tournament-end-date" />
+
+          <label for="reservationFee">Reservation Fee (optional)</label>
+          <input type="number" id="tournament-reservationFee" placeholder="Enter reservation fee" />
+
+          <label for="tournamentFee">Tournament Fee (optional)</label>
+          <input type="number" id="tournamentFee" placeholder="Enter tournament fee" />
+
+          <label for="category">Category</label>
+          <div id="tournament-categories">
+            <div class="category-row">
+              <label class="category-label">
+                <input type="checkbox" id="singlesWomen" />
+                Singles Women
+              </label>
+              <select class="participant-limit" id="singlesWomenParticipants">
+                <option value="" disabled selected>Select participant limit</option>
+                <option value="4">4</option>
+                <option value="8">8</option>
+                <option value="16">16</option>
+                <option value="32">32</option>
+              </select>
+            </div>
+
+            <div class="category-row">
+              <label class="category-label">
+                <input type="checkbox" id="singlesMen" />
+                Singles Men
+              </label>
+              <select class="participant-limit" id="singlesMenParticipants">
+                <option value="" disabled selected>Select participant limit</option>
+                <option value="4">4</option>
+                <option value="8">8</option>
+                <option value="16">16</option>
+                <option value="32">32</option>
+              </select>
+            </div>
+
+            <div class="category-row">
+              <label class="category-label">
+                <input type="checkbox" id="doublesWomen" />
+                Doubles Women
+              </label>
+              <select class="participant-limit" id="doublesWomenParticipants">
+                <option value="" disabled selected>Select participant limit</option>
+                <option value="4">4</option>
+                <option value="8">8</option>
+                <option value="16">16</option>
+                <option value="32">32</option>
+              </select>
+            </div>
+
+            <div class="category-row">
+              <label class="category-label">
+                <input type="checkbox" id="doublesMen" />
+                Doubles Men
+              </label>
+              <select class="participant-limit" id="doublesMenParticipants">
+                <option value="" disabled selected>Select participant limit</option>
+                <option value="4">4</option>
+                <option value="8">8</option>
+                <option value="16">16</option>
+                <option value="32">32</option>
+              </select>
+            </div>
+
+            <div class="category-row">
+              <label class="category-label">
+                <input type="checkbox" id="mix" />
+                Mixed
+              </label>
+              <select class="participant-limit" id="mixParticipants">
+                <option value="" disabled selected>Select participant limit</option>
+                <option value="4">4</option>
+                <option value="8">8</option>
+                <option value="16">16</option>
+                <option value="32">32</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Membership Fields -->
+        <div id="membership-fields" style="display: none">
+          <label for="reservationFee">Reservation Fee (optional)</label>
+          <input type="number" id="membership-reservationFee" placeholder="Enter reservation fee" />
+
+          <label for="membershipFee">Membership Fee (optional)</label>
+          <input type="number" id="membershipFee" placeholder="Enter membership fee" />
+        </div>
+
+        <!-- Image Upload -->
+        <label for="image">Upload Images:</label>
+        <div class="input-group">
+          <span class="input-group-btn">
+            <button id="uploadButton" type="button" class="btn btn-primary">
+              <i class="fas fa-upload"></i>
+              Upload
+            </button>
+          </span>
+        </div>
+
+        <!-- Image Preview Container -->
+        <div id="imagePreviewContainer" class="image-preview-container"></div>
+
+        <!-- Buttons -->
+        <div class="modal-buttons">
+          <button type="button" id="postNow">Post Now</button>
+          <button type="button" id="cancelModal">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>

@@ -1,0 +1,73 @@
+<body>
+  <section class="home-section">
+    <h1>User Payments</h1>
+    <div id="profileNav" class="profile-nav">
+      <a href="/user/admin/user-payments/?tab=court-reservation">Court Reservation</a>
+      <a href="/user/admin/user-payments/?tab=event-and-tournaments">Event/Tournaments</a>
+      <a href="/user/admin/user-payments/?tab=product-reservation" class="active">Product Reservation</a>
+    </div>
+
+    <div class="box">
+      <div class="filter-container">
+        <div class="filter-actions">
+          <label for="search">Search:</label>
+          <input type="text" id="search" class="search-field" placeholder="Search by name..." />
+          <button class="filter-button">
+            Print Payment
+            <i class="fas fa-file-alt"></i>
+          </button>
+          <button id="expandButton" class="filter-button">
+            Expand Table
+            <i class="fas fa-expand"></i>
+          </button>
+        </div>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Account Number</th>
+            <th>Date Paid</th>
+            <th>Reservation Fee</th>
+            <th>Reference Number</th>
+            <th class="expandable hide-column">Product Name</th>
+            <th class="expandable hide-column">Quantity</th>
+            <th class="expandable hide-column">Pick-up Date</th>
+            <th>Total Bill</th>
+            <th>Bill Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Charlie Brown</td>
+            <td>0987654321</td>
+            <td>2024-10-05</td>
+            <td>$150.00</td>
+            <td>REF654321</td>
+            <td class="expandable hide-column">Product A</td>
+            <td class="expandable hide-column">2</td>
+            <td class="expandable hide-column">2024-10-10</td>
+            <td>$150.00</td>
+            <td class="bill-status">
+              <span class="status-text">Paid</span>
+              <select class="status-dropdown hide">
+                <option value="Paid">Paid</option>
+                <option value="Pending">Pending</option>
+                <option value="Cancelled">Cancelled</option>
+              </select>
+            </td>
+            <td>
+              <div class="action-buttons">
+                <button class="icon-button edit-status" title="Edit Status">
+                  <i class="fas fa-edit"></i>
+                </button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</body>

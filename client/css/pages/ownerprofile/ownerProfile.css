@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
+  margin: 0;
+  margin-left: 190px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.home-section {
+  position: relative;
+  background: #fff;
+  top: 0;
+  left: 78px;
+  width: calc(100% - 78px);
+  transition: all 0.5s ease;
+  min-height: unset;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.sidebar.open ~ .home-section {
+  left: 250px;
+  width: calc(100% - 250px);
+}
+
+/* Profile Navigation */
+.profile-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+  margin-bottom: 20px;
+}
+
+.profile-nav a {
+  color: #142850;
+  text-decoration: none;
+  padding: 10px 40px;
+  font-weight: 500;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.profile-nav a.active {
+  background-color: #f1f1f1;
+  font-weight: bold;
+  border-bottom: 3px solid #142850;
+}
+
+.profile-nav a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Updated Box Styles */
+.box {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  width: 100%;
+  max-width: 1300px;
+  border: 1px solid #ddd;
+  margin: 0 auto;
+}
+
+.box h3 {
+  font-size: 20px;
+  color: #142850;
+  margin-bottom: 15px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.input-group label {
+  font-size: 12px;
+  font-weight: 500;
+  color: #2e2e2e;
+  margin-bottom: 5px;
+}
+
+.input-group input,
+.input-group select {
+  height: 45px;
+  width: 100%;
+  padding-left: 10px;
+  outline: none;
+  font-size: 14px;
+  font-weight: 400;
+  background-color: #f1f4fb;
+  color: #000;
+  border-radius: 5px;
+  border: 1px solid #f1f4fb;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+  border: 0.8px solid black;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}

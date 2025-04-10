@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1.0, user-scalable=no" />
+    <meta
+      name="description"
+      content="Manage badminton court reservations, tournaments, and events efficiently with our comprehensive platform.  (っ'ヮ'c)" />
+    <meta
+      name="keywords"
+      content="badminton court reservation, badminton tournament management, event scheduling, court booking system, sports event management, badminton scheduling software, online court reservations, sports facility booking, badminton event tracking, court management system, sports venue reservations" />
+
+    <title><%= htmlWebpackPlugin.options.title %></title>
+
+    <!-- Open Graph meta tags for enhancing link previews on social media -->
+    <meta itemprop="image" content="/android-chrome-192x192.png" />
+    <meta property="og:image" content="/android-chrome-192x192.png" />
+
+    <meta property="og:site_name" content="bataanbadminton" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="<%= htmlWebpackPlugin.options.title %>" />
+    <meta property="og:url" content="<%= htmlWebpackPlugin.options.domain %>" />
+    <meta
+      property="og:description"
+      content="Manage badminton court reservations, tournaments, and events efficiently with our comprehensive platform.  (っ'ヮ'c)" />
+    <meta property="og:image" content="/android-chrome-192x192.png" />
+    <meta property="og:image:alt" content="bataanbadminton" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card meta tags for enhancing link previews on Twitter -->
+    <meta name="twitter:title" content="bataanbadminton" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@bataanbadminton" />
+    <meta name="twitter:creator" content="@bataanbadminton-devs" />
+    <meta property="twitter:domain" content="<%= htmlWebpackPlugin.options.domain %>" />
+    <meta
+      name="twitter:description"
+      content="Manage badminton court reservations, tournaments, and events efficiently with our comprehensive platform.  (っ'ヮ'c)" />
+
+    <!-- Enables DNS prefetching to improve loading performance -->
+    <meta http-equiv="x-dns-prefetch-control" content="on" />
+
+    <!-- Directives for search engine crawlers -->
+    <meta name="robots" content="follow, index" />
+
+    <!-- Style of the status bar on Apple devices -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+    <!-- Apple touch icon for adding to home screen on iOS devices -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v1=1" />
+
+    <!-- Icons for different sizes used in various browser contexts -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v1=1" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v1=1" />
+
+    <!-- Web app manifest file -->
+    <link rel="manifest" href="/site.webmanifest?v1=1" />
+
+    <!-- Safari pinned tab icon with color customization -->
+    <link rel="mask-icon" href="/safari-pinned-tab.svg?v1=1" color="#5bbad5" />
+
+    <!-- Shortcut icon for legacy browser support -->
+    <link rel="shortcut icon" href="/favicon.ico?v1=1" />
+
+    <!-- Windows tiles customization -->
+    <meta name="msapplication-TileColor" content="#2d89ef" />
+
+    <!-- Theme color for mobile browsers -->
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Disabling referrer can fix some provider problems -->
+    <meta name="referrer" content="no-referrer" />
+    <!-- Inject page-specific styles only if available -->
+    <% if (htmlWebpackPlugin.options.styles && htmlWebpackPlugin.options.styles.length) { %> <%
+    htmlWebpackPlugin.options.styles.forEach(function(style) { %> <% if (style) { %>
+    <link rel="stylesheet" href="<%= style %>" />
+    <% } %> <% }) %> <% } %>
+  </head>
+  <body>
+    <!-- HTML Preloader -->
+    <div id="preloader" style="display: none">
+      <div class="spinner"></div>
+    </div>
+
+    <!-- Modal container (dynamically populated) -->
+    <div id="modalContainer"></div>
+
+    <% if (htmlWebpackPlugin.options.hasNavbar) { %>
+    <!-- Navbar -->
+    <%- require('./partials/navBarUser.ejs')() %> <% } %> 
+
+    <% if (htmlWebpackPlugin.options.hasSidebar) { %>
+    <!-- Sidebar -->
+    <%- require('./partials/sideNavAdmin.ejs')() %> <% } %>
+
+  
+    <!-- Body content -->
+  <%- htmlWebpackPlugin.options.bodyContent.replace(/<body[^>]*>/gi, '<div id="root">').replace(/<\/body>/gi, '</div>') %>
+
+    <!-- Webpack-generated JS -->
+    <% if (htmlWebpackPlugin.options.scripts && htmlWebpackPlugin.options.scripts.length) { %> <%
+    htmlWebpackPlugin.options.scripts.forEach(function(script) { %> <% if (script) { %>
+    <script src="<%= script %>"></script>
+    <% } %> <% }) %> <% } %>
+
+    <% if (htmlWebpackPlugin.options.hasFooter) { %>
+      <!-- Footer -->
+    <%- require('./partials/footer.ejs')() %> <% } %>
+  </body>
+</html>

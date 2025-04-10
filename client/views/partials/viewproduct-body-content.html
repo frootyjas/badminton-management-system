@@ -1,0 +1,242 @@
+<body>
+  <section class="home-section">
+    <h1>Manage Products</h1>
+
+    <div class="box">
+      <div class="stats-container">
+        <div class="stat-box total-product">
+          <i class="fas fa-box"></i>
+          <div class="stat-box-content">
+            <h3>Total Product</h3>
+            <span>150</span>
+          </div>
+        </div>
+        <div class="stat-box total-stock">
+          <i class="fas fa-cubes"></i>
+          <div class="stat-box-content">
+            <h3>Total Stock</h3>
+            <span>500</span>
+          </div>
+        </div>
+        <div class="stat-box total-orders">
+          <i class="fas fa-shopping-cart"></i>
+          <div class="stat-box-content">
+            <h3>Total Orders</h3>
+            <span>120</span>
+          </div>
+        </div>
+        <div class="stat-box total-customers">
+          <i class="fas fa-users"></i>
+          <div class="stat-box-content">
+            <h3>Total Customers</h3>
+            <span>200</span>
+          </div>
+        </div>
+        <div class="stat-box sales">
+          <i class="fas fa-wallet"></i>
+          <div class="stat-box-content">
+            <h3>Sales</h3>
+            <span>$45,000</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="filter-container">
+        <div class="filter-left">
+          <a href="#" class="filter-button" id="addProductButton">
+            Add New Product
+            <i class="fas fa-plus"></i>
+          </a>
+        </div>
+
+        <div class="filter-actions">
+          <label for="search">Search:</label>
+          <input type="text" id="search" class="search-field" placeholder="Search here..." onkeyup="searchTable()" />
+          <a href="viewScheduleAdmin.html" class="filter-button">
+            View Pickup Schedule
+            <i class="fas fa-calendar-alt"></i>
+          </a>
+          <a href="viewUserPaymentProduct.html" class="filter-button">
+            View Payment
+            <i class="fas fa-credit-card"></i>
+          </a>
+          <a href="#" id="toggleTableButton" class="filter-button" onclick="toggleTables()">
+            Archive
+            <i class="fas fa-archive"></i>
+          </a>
+          <a href="#" class="filter-button">
+            Print List
+            <i class="fas fa-file-alt"></i>
+          </a>
+        </div>
+      </div>
+
+      <div id="productTableContainer">
+        <h3>Product List</h3>
+        <table id="productTable">
+          <thead>
+            <tr>
+              <th>Image</th>
+              <th onclick="sortTable(0)">
+                Product Name
+                <i class="sort-icon fas fa-sort"></i>
+              </th>
+              <th>Details</th>
+              <th onclick="sortTable(0)">
+                Brand
+                <i class="sort-icon fas fa-sort"></i>
+              </th>
+              <th onclick="sortTable(0)">
+                Stock
+                <i class="sort-icon fas fa-sort"></i>
+              </th>
+              <th onclick="sortTable(0)">
+                Category
+                <i class="sort-icon fas fa-sort"></i>
+              </th>
+              <th>Sizes</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><img src="https://via.placeholder.com/50" alt="Men's Badminton Jersey" /></td>
+              <td>Men's Badminton Jersey</td>
+              <td>Comfortable jersey for badminton players</td>
+              <td>Nike</td>
+              <td>30</td>
+              <td>Apparel</td>
+              <td>S, M, L</td>
+              <td>
+                <div class="action-buttons">
+                  <button
+                    class="icon-button archive"
+                    title="Archive Product"
+                    onclick="archiveProduct('Men\'s Badminton Jersey')">
+                    <i class="fas fa-archive"></i>
+                  </button>
+                  <button
+                    class="icon-button edit-status"
+                    title="Edit Product"
+                    onclick="editProduct('Men\'s Badminton Jersey')">
+                    <i class="fas fa-edit"></i>
+                  </button>
+                  <button
+                    class="icon-button delete"
+                    title="Delete Product"
+                    onclick="deleteProduct('Men\'s Badminton Jersey')">
+                    <i class="fas fa-trash"></i>
+                  </button>
+                </div>
+              </td>
+            </tr>
+            <!-- More rows... -->
+          </tbody>
+        </table>
+      </div>
+
+      <div id="archiveTableContainer" style="display: none">
+        <h3>Archived Products</h3>
+        <table id="archiveTable">
+          <thead>
+            <tr>
+              <th>Image</th>
+              <th>Product Name</th>
+              <th>Details</th>
+              <th>Brand</th>
+              <th>Stock</th>
+              <th>Category</th>
+              <th>Sizes</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><img src="https://via.placeholder.com/50" alt="Men's Badminton Jersey" /></td>
+              <td>Men's Badminton Jersey</td>
+              <td>Comfortable jersey for badminton players</td>
+              <td>Nike</td>
+              <td>30</td>
+              <td>Apparel</td>
+              <td>S, M, L</td>
+              <td>
+                <div class="action-buttons">
+                  <button
+                    class="icon-button redo"
+                    title="Redo Product"
+                    onclick="archiveProduct('Men\'s Badminton Jersey')">
+                    <i class="fas fa-redo"></i>
+                  </button>
+                  <button
+                    class="icon-button delete"
+                    title="Delete Product"
+                    onclick="deleteProduct('Men\'s Badminton Jersey')">
+                    <i class="fas fa-trash"></i>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div id="addProductModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-left">
+          <img src="https://via.placeholder.com/200" alt="Product Image" id="productImagePreview" />
+        </div>
+
+        <div class="modal-right">
+          <h2>Add New Product</h2>
+          <form id="productForm">
+            <div class="input-row">
+              <div>
+                <label for="productName">Product Name:</label>
+                <input type="text" id="productName" placeholder="Enter product name" required />
+              </div>
+              <div>
+                <label for="productDetails">Details:</label>
+                <input type="text" id="productDetails" placeholder="Enter product details" required />
+              </div>
+            </div>
+
+            <div class="input-row">
+              <div>
+                <label for="productBrand">Brand:</label>
+                <input type="text" id="productBrand" placeholder="Enter brand" required />
+              </div>
+              <div>
+                <label for="productStock">Stock:</label>
+                <input type="number" id="productStock" placeholder="Enter stock quantity" required />
+              </div>
+            </div>
+
+            <div class="input-row">
+              <div>
+                <label for="productCategory">Category:</label>
+                <select id="productCategory" required>
+                  <option value="" disabled selected>Select category</option>
+                  <option value="Rackets">Rackets</option>
+                  <option value="Shuttles">Shuttles</option>
+                  <option value="Bags">Bags</option>
+                  <option value="Apparel">Apparel</option>
+                  <option value="Shoes">Shoes</option>
+                  <option value="Accessories">Accessories</option>
+                </select>
+              </div>
+              <div>
+                <label for="productSize">Size:</label>
+                <input type="text" id="productSize" placeholder="Enter size" required />
+              </div>
+            </div>
+
+            <div class="modal-buttons">
+              <button type="submit">Add Product</button>
+              <button type="button" id="cancelProductModal">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>

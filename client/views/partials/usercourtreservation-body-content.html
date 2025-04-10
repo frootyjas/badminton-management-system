@@ -1,0 +1,60 @@
+<body>
+  <div class="reservation-section">
+    <h1>Court Reservation</h1>
+
+    <div class="left-container">
+      <label for="location">Location</label>
+      <div class="location-field">
+        <i class="fas fa-map-marker-alt"></i>
+        <input type="text" placeholder="Location" readonly />
+      </div>
+
+      <label for="date">1. Choose Date</label>
+      <div class="calendar">
+        <div id="calendar"></div>
+      </div>
+    </div>
+
+    <!-- Right Side -->
+    <div class="right-container">
+      <!-- Time Table -->
+      <div class="section1">
+        <label for="time">2. Choose Time</label>
+        <div id="timeSlots" class="time-table">
+          <!-- Dynamic Time Slots Will Appear Here -->
+        </div>
+      </div>
+
+      <!-- Court Images -->
+      <div class="section2">
+        <label for="courts">3. Choose Court</label>
+        <div id="courtImages" class="court-images">
+          <!-- Dynamic Court Images Will Appear Here -->
+        </div>
+      </div>
+
+      <div class="section3">
+        <label for="pay-online">4. Payment</label>
+        <div class="payment-section">
+          <div class="payment-row">
+            <span class="payment-label">Calculated Total Amount</span>
+            <span class="payment-value">&#8369;0.00</span>
+          </div>
+          <div class="payment-row">
+            <span class="payment-label">Reservation Fee</span>
+            <span class="payment-value">&#8369;0.00</span>
+          </div>
+          <div class="payment-row">
+            <span class="payment-label total-payment-label">Total Payment to Pay online</span>
+            <span class="payment-value total-payment-value">&#8369;0.00</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Reserve Button -->
+      <div class="section4">
+        <button id="reserveButton" class="reserve-button">Reserve</button>
+      </div>
+    </div>
+  </div>
+</body>

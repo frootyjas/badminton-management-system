@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+h2 {
+  margin: 15px;
+}
+
+p {
+  margin: 15px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.close {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.success-box,
+.confirm-box,
+.error-box {
+  border-radius: 10px;
+}
+
+.success-box h2 {
+  color: green;
+}
+
+.error-box {
+  border: 2px solid #f04747;
+}
+
+.error-box h2 {
+  color: #f04747;
+}
+
+.confirm-box h2 {
+  color: #142850;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.confirm-btn {
+  background-color: #142850;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.confirm-btn:hover {
+  background-color: #397cf7;
+}
+
+.cancel-btn {
+  background-color: #f1f4fb;
+  color: #142850;
+}
+
+.cancel-btn:hover {
+  background-color: #397cf7;
+  color: #fff;
+}
+
+.radio-group {
+  text-align: left;
+  margin-top: 10px;
+}
+
+.privacy-policy {
+  font-size: 0.9em;
+  color: #555;
+  margin-top: 15px;
+}
+
+#dynamicModal {
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#dynamicModal .modal-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 30%;
+  text-align: center;
+  position: relative;
+}

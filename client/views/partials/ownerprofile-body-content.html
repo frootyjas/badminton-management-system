@@ -1,0 +1,71 @@
+<body>
+  <section class="home-section">
+    <h1>Profile</h1>
+    <div id="profileNav" class="profile-nav">
+      <a href="/user/admin/profile?tab=owner-profile" class="active">Owner Profile</a>
+      <a href="/user/admin/profile?tab=business-profile">Business Profile</a>
+      <a href="/user/admin/profile?tab=pinpoint-profile">Pin Point Profile</a>
+    </div>
+
+    <div class="box">
+      <h3>
+        Personal Information  
+        <i class="fas fa-edit"></i>
+      </h3>
+      <div class="grid-container">
+        <div class="input-group">
+          <label for="firstName">First Name</label>
+          <input type="text" id="firstName" placeholder="Enter your first name" readonly/>
+        </div>
+        <div class="input-group">
+          <label for="middleName">Middle Name</label>
+          <input type="text" id="middleName" placeholder="Enter your middle name" readonly/>
+        </div>
+        <div class="input-group">
+          <label for="lastName">Last Name</label>
+          <input type="text" id="lastName" placeholder="Enter your last name" readonly/>
+        </div>
+        <!-- Gender as Dropdown -->
+        <div class="input-group">
+          <label for="gender">Gender</label>
+          <select id="gender" disabled>
+            <option disabled selected>Select gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+        </div>
+        <div class="input-group">
+          <label for="birthday">Birthday</label>
+          <input type="date" id="birthday" disabled/>
+        </div>
+        <div class="input-group">
+          <label for="contactNumber">Contact Number</label>
+          <input type="text" id="contactNumber" placeholder="Enter your contact number" readonly/>
+        </div>
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Enter your email" readonly/>
+        </div>
+        <!-- Municipality as Dropdown -->
+        <div class="input-group">
+          <label for="municipality">Municipality</label>
+          <select id="municipality" disabled>
+            <option disabled selected>Select municipality</option>
+            <option>Abucay</option>
+            <option>Bagac</option>
+            <option>Balanga City</option>
+            <option>Dinalupihan</option>
+            <option>Hermosa</option>
+            <option>Limay</option>
+            <option>Mariveles</option>
+            <option>Morong</option>
+            <option>Orani</option>
+            <option>Orion</option>
+            <option>Samal</option>
+            <option>Pilar</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>

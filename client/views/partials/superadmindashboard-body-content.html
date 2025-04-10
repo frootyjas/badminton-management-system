@@ -1,0 +1,159 @@
+<body>
+  <header class="navbar">
+    <div class="nav-items">
+      <a href="#" class="nav-link active" data-tab="approval-page">Pending Approval</a>
+      <a href="#" class="nav-link" data-tab="court-list">Court Owner List</a>
+      <a href="#" class="nav-link" data-tab="user-list">User List</a>
+    </div>
+    <button id="logoutBtn" class="logout-btn">Logout</button>
+  </header>
+
+  <div class="content-container">
+    <section id="approval-page" class="tab-content active">
+      <table id="courtOwnersTable">
+        <thead>
+          <tr>
+            <th>No.</th>
+            <th>Owner Name</th>
+            <th>Business Name</th>
+            <th>
+              <!-- Municipality filter dropdown -->
+              <div class="filter-container">
+                <label for="municipalityFilter" class="filter-label">Address</label>
+                <select id="municipalityFilter" class="filter-dropdown">
+                  <option value="">All Municipalities</option>
+                  <option value="Abucay">Abucay</option>
+                  <option value="Bagac">Bagac</option>
+                  <option value="Balanga">Balanga</option>
+                  <option value="Dinalupihan">Dinalupihan</option>
+                  <option value="Hermosa">Hermosa</option>
+                  <option value="Limay">Limay</option>
+                  <option value="Mariveles">Mariveles</option>
+                  <option value="Morong">Morong</option>
+                  <option value="Orani">Orani</option>
+                  <option value="Orion">Orion</option>
+                  <option value="Pilar">Pilar</option>
+                  <option value="Samal">Samal</option>
+                </select>
+              </div>
+            </th>
+            <th>Email</th>
+            <th>Number</th>
+            <th>DTI Number</th>
+            <th>Registration Date</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="approvalTableBody">
+          <!-- Dynamic rows will be injected here -->
+        </tbody>
+      </table>
+    </section>
+
+    <section id="court-list" class="tab-content">
+      <h4>Approved Court Owners</h4>
+      <table id="approvedTable">
+        <thead>
+          <tr>
+            <th>No.</th>
+            <th>Owner Name</th>
+            <th>
+              <!-- Municipality filter dropdown -->
+              <div class="filter-container">
+                <label for="municipalityFilter" class="filter-label">Address</label>
+                <select id="municipalityFilter" class="filter-dropdown">
+                  <option value="">All Municipalities</option>
+                  <option value="Abucay">Abucay</option>
+                  <option value="Bagac">Bagac</option>
+                  <option value="Balanga">Balanga</option>
+                  <option value="Dinalupihan">Dinalupihan</option>
+                  <option value="Hermosa">Hermosa</option>
+                  <option value="Limay">Limay</option>
+                  <option value="Mariveles">Mariveles</option>
+                  <option value="Morong">Morong</option>
+                  <option value="Orani">Orani</option>
+                  <option value="Orion">Orion</option>
+                  <option value="Pilar">Pilar</option>
+                  <option value="Samal">Samal</option>
+                </select>
+              </div>
+            </th>
+            <th>Email</th>
+            <th>Contact Number</th>
+            <th>DTI Number</th>
+            <th>Registration Date</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="approvedTableBody">
+          <!-- content will be injected here dynamically -->
+        </tbody>
+      </table>
+
+      <h4>Denied Court Owners</h4>
+      <table id="deniedTable">
+        <thead>
+          <tr>
+            <th>No.</th>
+            <th>Owner Name</th>
+            <th>
+              <!-- Municipality filter dropdown -->
+              <div class="filter-container">
+                <label for="municipalityFilter" class="filter-label">Address</label>
+                <select id="municipalityFilter" class="filter-dropdown">
+                  <option value="">All Municipalities</option>
+                  <option value="Abucay">Abucay</option>
+                  <option value="Bagac">Bagac</option>
+                  <option value="Balanga">Balanga</option>
+                  <option value="Dinalupihan">Dinalupihan</option>
+                  <option value="Hermosa">Hermosa</option>
+                  <option value="Limay">Limay</option>
+                  <option value="Mariveles">Mariveles</option>
+                  <option value="Morong">Morong</option>
+                  <option value="Orani">Orani</option>
+                  <option value="Orion">Orion</option>
+                  <option value="Pilar">Pilar</option>
+                  <option value="Samal">Samal</option>
+                </select>
+              </div>
+            </th>
+            <th>Email</th>
+            <th>Contact Number</th>
+            <th>DTI Number</th>
+            <th>Registration Date</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="deniedTableBody">
+          <!-- content will be injected here dynamically -->
+        </tbody>
+      </table>
+    </section>
+
+    <section id="user-list" class="tab-content">
+      <table id="userListTable">
+        <thead>
+          <tr>
+            <th>No.</th>
+            <th>Name</th>
+            <th>Municipality</th>
+            <th>Contact Number</th>
+            <th>Email</th>
+            <th>Gender</th>
+            <th>User Type</th>
+            <th>Registration Date</th>
+          </tr>
+        </thead>
+        <tbody id="userListTableBody">
+          <!-- content will be injected here dynamically -->
+        </tbody>
+      </table>
+    </section>
+  </div>
+  <!-- view Details Modal -->
+  <div id="viewDetailsModal" class="modal">
+    <div class="modal-content">
+      <!-- content will be injected here dynamically -->
+    </div>
+  </div>
+</body>

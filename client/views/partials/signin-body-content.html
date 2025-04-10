@@ -1,0 +1,83 @@
+<body>
+  <div id="index-ui">
+    <div class="container">
+      <div class="upper-content-container">
+        <div class="logo-container">
+          <a href="/">
+            <img src="/assets/images/logo-white.png" alt="Logo" />
+          </a>
+        </div>
+        <div class="title-container">
+          <h2>Bataan Badminton Portal</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="img-container">
+      <img src="/assets/images/indexImg.png" alt="Image" />
+    </div>
+  </div>
+
+  <div class="login-form-container">
+    <div class="login-form" id="loginFormContainer">
+      <div class="text">Sign in</div>
+      <form id="loginform">
+        <div class="data">
+          <label>Username</label>
+          <input type="text" id="username" name="username" placeholder="Enter your username" required />
+        </div>
+        <div class="data">
+          <label>Password</label>
+          <input id="password" name="password" type="password" placeholder="Enter your password" required />
+          <!--<i class="fas fa-eye-slash toggle-password"></i> -->
+        </div>
+        <div class="data">
+          <label>User Type</label>
+          <select name="userType" required>
+            <option value="" disabled selected>Select user type</option>
+            <option value="Superadmin">Admin</option>
+            <option value="Admin">Court Owner</option>
+            <option value="Coach">Coach</option>
+            <option value="Player">Player</option>
+          </select>
+        </div>
+        <div id="login-errors" class="error-message"></div>
+        <button id="loginBtn" class="btn" type="submit">
+          <span class="submit">Sign in</span>
+        </button>
+        <div class="forgot-pass">
+          <a href="#" id="open-modal">Forgot Password?</a>
+        </div>
+      </form>
+    </div>
+    <div>
+      <h4>
+        Don't have an account?
+        <a href="/register">Sign up here.</a>
+      </h4>
+    </div>
+  </div>
+
+  <!-- Forgot Password Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close-button" id="close-modal">&times;</span>
+      <h1 class="modal-title">Reset Your Password</h1>
+      <form id="forgotPasswordForm" method="post">
+        <div class="data">
+          <label for="verification-email">Please enter your email address to receive a password reset link.</label>
+          <input
+            type="text"
+            id="verification-email"
+            name="verification_email"
+            placeholder="Enter your email address"
+            required />
+          <div id="verification-email-error" class="error-message"></div>
+        </div>
+        <button type="submit" id="forgotSubmitBtn" class="submit">
+          <span class="btnText">Send</span>
+        </button>
+      </form>
+    </div>
+  </div>
+</body>

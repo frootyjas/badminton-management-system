@@ -1,0 +1,39 @@
+<body>
+  <section class="home-section">
+    <h1>View Schedule</h1>
+    <div id="profileNav" class="profile-nav">
+      <a href="/user/admin/schedule/?tab=court-reservation" class="active">Court Reservations</a>
+    </div>
+    <div class="box">
+      <div class="filter-container">
+        <div class="date-nav">
+          <span class="date"></span>
+          <button class="nav-button">Previous</button>
+          <button class="nav-button">Next</button>
+        </div>
+
+        <div class="filter-actions">
+          <label for="search">Search:</label>
+          <input type="text" id="search" class="search-field" placeholder="Search by name..." />
+          <button id="print-button" class="filter-button">
+            Print Schedule
+            <i class="fas fa-file-alt"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="table-container">
+        <div class="scrollable-table">
+          <table>
+            <thead>
+              <tr>
+                <!-- Add more courts as needed dynamically based on totalCourts -->
+              </tr>
+            </thead>
+            <tbody class="reservations-body"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>

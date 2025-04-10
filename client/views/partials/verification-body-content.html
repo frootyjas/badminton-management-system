@@ -1,0 +1,20 @@
+<body>
+  <div class="container">
+    <h1>Verify your Account</h1>
+    <form id="verification-form">
+      <div class="data">
+        <label for="verification-code">We've sent a one-time password in your email. Type it below to continue.</label>
+        <input
+          type="text"
+          id="verification-code"
+          name="verification_code"
+          placeholder="Enter your verification code"
+          required />
+        <div id="verification-code-error" class="error-message"></div>
+      </div>
+      <button type="submit" class="submit">
+        <span class="btnText">Verify</span>
+      </button>
+    </form>
+  </div>
+</body>

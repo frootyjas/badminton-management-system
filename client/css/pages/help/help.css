@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin: 0 auto;
+    margin-top: 70px;
+    padding: 20px;
+    width: 100%;
+    max-width: 1300px;
+}
+
+.main-content h1 {
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.overview-container {
+    background-color: #fff;
+    text-align: justify;
+    width: 100%;
+}
+
+.overview-container h1 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.overview-container p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.services-container {
+    margin: 40px 0;
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.services-container h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.service-card {
+    background-color: #f1f4fb;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+}
+
+.service-icon {
+    font-size: 40px;
+    color: #142850;
+    margin-bottom: 10px;
+}
+
+.service-card h3 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.service-card p {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 14px;
+}
+
+.faq-container {
+    display: flex;
+    align-items: flex-start; 
+    margin-bottom: 70px; 
+    max-width: 100%;
+}
+
+.faq-image {
+    width: 400px; 
+    height: auto; 
+    margin-right: 20px; 
+}
+
+.wrapper {
+    max-width: 75%;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.wrapper > p,
+.wrapper > h1 {
+    margin: 24px 0;
+    text-align: center;
+}
+
+.accordion {
+    background-color: white;
+    color: rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%; 
+    padding: 15px 20px;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accordion i {
+    font-size: 25.6px;
+}
+
+.active,
+.accordion:hover {
+    background-color: #f1f4fb;
+}
+
+.pannel {
+    padding: 0 32px 40px 32px;
+    background-color: #f1f4fb;
+    overflow: hidden;
+    display: none; 
+    width: 100%; 
+    box-sizing: border-box; 
+}
+
+.pannel p {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 16px;
+    line-height: 22.4px;
+}
+
+.faq {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    margin: 10px 0;
+    width: 100%; 
+}
+
+.faq.active {
+    border: none;
+}
+
+.faq.active .pannel {
+    display: block; 
+}
+
+footer {
+    background-color: #f1f2f6;
+    color: #333;
+    padding: 20px 10px;
+    width: 100%;
+    min-height: 60px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.footer-logo img {
+    width: 40px;
+    margin-right: 8px;
+}
+
+.footer-logo h2 {
+    font-size: 16px;
+    color: #333;
+}
+
+.footer-sections {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.developers-section {
+    width: 45%;
+    text-align: center;
+}
+
+.developers-section h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #397CF7;
+}
+
+.feedback-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.feedback-rating {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.rating-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.rating-option p {
+    margin-top: -10px;
+}
+ 
+.rating-option:hover {
+    transform: scale(1.1);
+}
+
+.rating-option .emoji {
+    font-size: 60px;
+    transition: background-color 0.3s, border-radius 0.3s;
+    padding: 8px;
+    border-radius: 50%;
+}
+
+.rating-option:hover .emoji {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.rating-option[data-value="5"] .emoji { color: #00c853; }
+.rating-option[data-value="4"] .emoji { color: #64dd17; }
+.rating-option[data-value="3"] .emoji { color: #ffeb3b; }
+.rating-option[data-value="2"] .emoji { color: #ff6d00; }
+.rating-option[data-value="1"] .emoji { color: #d50000; }
+
+.feedback-form textarea {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    margin-bottom: 8px;
+    margin-left: -5px;
+    border-radius: 4px;
+    border: 1px solid #f1f4fb;
+    background-color: #f1f4fb;
+    resize: none;
+    height: 60px;
+    min-width: 300px;
+    transition: border-color 0.3s;
+}
+
+.feedback-form textarea:focus {
+    border-color: #000;
+    outline: none;
+}
+
+.feedback-form button {
+    padding: 6px 12px;
+    background-color: #142850;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 70px;
+}
+
+.feedback-form button:hover {
+    background-color: #397CF7;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+    display: flex;
+    gap: 15px;
+}
+
+.footer-links li {
+    display: inline;
+}
+
+.footer-links li a {
+    text-decoration: none;
+    color: #142850;
+    font-size: 14px;
+}
+
+.footer-links li a:hover {
+    color: #397CF7;
+}
+
+footer p {
+    font-size: 13px;
+    margin-top: 8px;
+    color: #333;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .logo-container img {
+        width: 100px;
+        margin-top: 10px;
+    }
+
+    .title-container h2 {
+        font-size: 25px;
+        margin-top: 5px;
+        margin-bottom: 30px;
+    }
+
+    .button-container {
+        margin-top: 15px;
+    }
+
+    .button-container button {
+        width: 100px;
+        padding: 8px 10px;
+        font-size: 14px;
+        margin: 5px;
+    }
+
+    .description-container h5 {
+        margin-top: 20px;
+    }
+
+    .courtreg p {
+        width: 90%;
+    }
+
+    .footer-sections {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .developers-section {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 3px;
+    }
+}

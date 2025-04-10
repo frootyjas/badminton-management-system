@@ -1,0 +1,73 @@
+<body>
+  <div class="main-content">
+    <h1>My Community</h1>
+    <h5>Welcome to our badminton community! Here, you'll find resources, events, and more to help you improve your game and connect with others.</h5>
+        <div class="container">
+      <div class="side-box">
+        <div class="box1">
+          <div class="filter-header">Filter</div>
+          <div class="selected-filters" id="selected-filters"></div>
+          <div class="filter-section">
+            <div class="filter-header">Date Posted</div>
+            <label>
+              <input type="checkbox" name="date-filter" value="today" />
+              Today
+            </label>
+            <label>
+              <input type="checkbox" name="date-filter" value="this week" />
+              This Week
+            </label>
+            <label>
+              <input type="checkbox" name="date-filter" value="this month" />
+              This Month
+            </label>
+          </div>
+
+          <div class="filter-section">
+            <div class="filter-header">Popular</div>
+            <div id="popular-hashtags">
+              <!-- Hashtags will be inserted here dynamically -->
+            </div>
+          </div>
+
+          <div class="filter-section">
+            <div class="filter-header">Sort By</div>
+            <label>
+              <input type="checkbox" name="sort-filter" id="sort-ascending" value="createdAt:asc" />
+              Ascending
+            </label>
+            <label>
+              <input type="checkbox" name="sort-filter" id="sort-descending" value="createdAt:desc" />
+              Descending
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="main-box" id="post-feed">
+        <!-- Dynamic post entries will be inserted here -->
+        <div id="create-post-container" class="create-post">
+          <div class="profile-pic">
+          </div>
+          <input type="text" id="post-input" placeholder="What's on your mind?" />
+          <button>Post</button>
+        </div>
+      </div>
+
+    <!-- Modal for Comment -->
+    <div id="comment-modal" class="comment-modal" style="display: none">
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2 id="post-modal-title"></h2>
+        <div class="comments-container" id="comment-list">
+          <!-- Dynamic comments will be inserted here -->
+        </div>
+        <div class="comment-input">
+          <div class="profile-pic"></div>
+          <textarea placeholder="Write your comment here..." id="comment-textarea"></textarea>
+          <button id="submit-comment">Comment</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

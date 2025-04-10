@@ -1,0 +1,421 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
+  margin: 0;
+  margin-left: 190px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.home-section {
+  position: relative;
+  background: #fff;
+  top: 0;
+  left: 78px;
+  width: calc(100% - 78px);
+  transition: all 0.5s ease;
+  min-height: unset;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.membership-list-container {
+  display: flex;
+  padding: 20px;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.left-panel,
+.right-panel {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  width: 48%;
+  box-sizing: border-box;
+}
+
+.left-panel h2,
+.right-panel h2 {
+  padding: 0;
+  margin-bottom: 15px;
+  color: #142850;
+}
+
+.membership-form input,
+.membership-form textarea,
+.membership-form button,
+.membership-form select {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+}
+.membership-form input,
+.membership-form textarea {
+  font-family: inherit;
+  font-size: 14px;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+}
+
+.membership-form input:focus,
+.membership-form select:focus {
+  border-color: #142850;
+  outline: none;
+}
+
+.membership-form button {
+  background-color: #142850;
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+
+.membership-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.membership-form button:hover {
+  background-color: #2e4a6b;
+}
+
+.membership-card {
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 200px;
+  height: 300px;
+  box-sizing: border-box;
+}
+
+.membership-card img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.membership-card h3 {
+  margin: 10px 0;
+  color: #2a3d66;
+  font-size: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.membership-card .price {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #2a3d66;
+}
+
+.membership-card .action-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  gap: 8px; /* Reduced the gap between buttons */
+}
+
+.membership-card .action-buttons button {
+  padding: 5px 10px;
+  font-size: 1.2rem;
+  background-color: #e0e0e0;
+  color: #333;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.membership-card .action-buttons button:hover {
+  background-color: #c0c0c0;
+}
+
+.membership-list-wrapper {
+  display: flex;
+  overflow-x: auto;
+  width: 100%;
+  gap: 15px;
+  flex-wrap: nowrap;
+  max-height: 350px; /* Set max height to 350px */
+  overflow-y: hidden; /* Hide vertical overflow */
+}
+
+.membership-list-wrapper::-webkit-scrollbar {
+  height: 8px;
+}
+
+.membership-list-wrapper::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.membership-list-wrapper::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.order-panel {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  border-radius: 8px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.order-panel h2 {
+  margin-bottom: 15px;
+  color: #2a3d66;
+}
+
+.order-panel tbody {
+  display: block;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.order-panel thead,
+.order-panel tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.approve-btn,
+.deny-btn {
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.approve-btn {
+  background-color: green;
+  color: white;
+}
+
+.approve-btn:hover {
+  background-color: darkgreen;
+}
+
+.deny-btn {
+  background-color: red;
+  color: white;
+}
+
+.deny-btn:hover {
+  background-color: darkred;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+
+  padding: 20px;
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 10px;
+  width: 30%; /* Adjust width to make it less wide */
+  position: relative;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.close {
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 30px;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Form Inputs in Modal */
+.modal-content input,
+.modal-content select,
+.modal-content textarea,
+.modal-content button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+}
+
+.modal-content input,
+.modal-content textarea {
+  font-family: inherit;
+  font-size: 14px;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+}
+
+.modal-content input:focus,
+.modal-content select:focus {
+  border-color: #142850;
+  outline: none;
+}
+
+.modal-content button {
+  background-color: #142850;
+  color: white;
+  cursor: pointer;
+  border: none;
+  font-size: 16px;
+}
+
+.modal-content button:hover {
+  background-color: #142850;
+}
+
+.membership-card .description {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 5px;
+  max-height: 30px;
+  overflow-y: auto;
+  padding: 5px;
+  border-top: 1px solid #ddd;
+}
+
+.membership-card .description::-webkit-scrollbar {
+  width: 6px;
+}
+
+.membership-card .description::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.membership-card .description::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.subscribers-modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.subscribers-modal-content {
+  background-color: #fff;
+  border-radius: 10px;
+  max-height: 80%;
+  overflow-y: auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  position: relative;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.subscribers-modal-content h2 {
+  font-size: 1.5rem;
+  color: #142850;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.close {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.close {
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+.subscribers-table th {
+  background-color: #f2f2f2;
+}
+.subscribers-table th,
+.subscribers-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+.subscribers-table {
+  border-collapse: collapse;
+}
+
+.remove-btn:hover {
+  background-color: #c9302c;
+}
+.remove-btn {
+  background-color: #f1f4fb;
+  color: #142850;
+}
+.remove-btn {
+  background-color: #d9534f;
+}
+.remove-btn {
+  color: #fff;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px 0;
+}

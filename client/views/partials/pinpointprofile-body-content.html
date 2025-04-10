@@ -1,0 +1,39 @@
+<body>
+  <section class="home-section">
+    <h1>Profile</h1>
+    <div id="profileNav" class="profile-nav">
+      <a href="/user/admin/profile?tab=owner-profile">Owner Profile</a>
+      <a href="/user/admin/profile?tab=business-profile" >Business Profile</a>
+      <a href="/user/admin/profile?tab=pinpoint-profile" class="active">Pin Point Profile</a>
+    </div>
+
+    <div class="container">
+      <!-- Pin Container -->
+      <div class="pin-container">
+        <h3>
+          Business Logo and Description
+          <i class="fas fa-edit"></i>
+        </h3>
+        <div class="image-upload-container">
+          <img id="pin-preview" src="/assets/images/logo_placeholder_150x150.png" alt="Upload Business Logo" />
+          <input type="file" id="pin-image-upload" accept="image/*" style="display: none" />
+        </div>
+        <h4>Business Name</h4>
+        <textarea id="pin-description-textarea" placeholder="Tell us about your court"></textarea>
+      </div>
+
+      <!-- Map Container -->
+      <div class="map-container">
+        <h3>
+          Location
+          <i class="fas fa-edit"></i>
+        </h3>
+        <div class="location-field">
+          <i class="fas fa-map-marker-alt"></i>
+          <input type="text" placeholder="Location" readonly />
+        </div>
+        <div class="map-box"></div>
+      </div>
+    </div>
+  </section>
+</body>

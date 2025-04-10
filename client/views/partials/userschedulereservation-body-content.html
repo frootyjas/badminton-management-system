@@ -1,0 +1,68 @@
+<body>
+  <div class="main-content">
+    <h1>Events and Tournaments</h1>
+    <div class="filter-actions filter-group-1">
+      <a href="/user/announcements?tab=my-feed" class="filter-button">My Feed</a>
+      <a href="/user/announcements?tab=schedule-reservation" class="filter-button active">My Schedule</a>
+    </div>
+
+    <div class="container">
+      <div class="box1">
+        <div class="filter-header">Filter</div>
+        <div class="selected-filters" id="selected-filters"></div>
+
+        <div class="filter-section">
+          <div class="filter-header">Date</div>
+          <label>
+            <input type="checkbox" name="dateFilter" value="Today" />
+            Today
+          </label>
+          <label>
+            <input type="checkbox" name="dateFilter" value="This Week" />
+            This Week
+          </label>
+          <label>
+            <input type="checkbox" name="dateFilter" value="This Month" />
+            This Month
+          </label>
+        </div>
+
+        <div class="filter-section">
+          <div class="filter-header">Status</div>
+          <label>
+            <input type="checkbox" name="statusFilter" value="Pending" />
+            Pending
+          </label>
+          <label>
+            <input type="checkbox" name="statusFilter" value="Ongoing" />
+            Ongoing
+          </label>
+          <label>
+            <input type="checkbox" name="statusFilter" value="Confirmed" />
+            Confirmed
+          </label>
+          <label>
+            <input type="checkbox" name="statusFilter" value="Cancelled" />
+            Cancelled
+          </label>
+        </div>
+
+        <div class="filter-section">
+          <div class="filter-header">Sort By</div>
+          <label>
+            <input type="checkbox" name="sortOrder" value="ascending" />
+            Ascending
+          </label>
+          <label>
+            <input type="checkbox" name="sortOrder" value="descending" />
+            Descending
+          </label>
+        </div>
+      </div>
+
+      <div class="box2" id="reservations-container">
+        <!-- Reservations will be dynamically populated here -->
+      </div>
+    </div>
+  </div>
+</body>

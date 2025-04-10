@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
+#root body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 0;
+}
+
+#root .map-section {
+  padding: 20px;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  margin-top: 70px;
+}
+
+.map-section h1 {
+  font-size: 25px;
+  text-align: center;
+}
+
+#root .map-section .map-box {
+  width: 100%;
+  height: 500px;
+  background-color: #f1f4fb;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-container {
+  display: block;
+  position: relative;
+  background-color: white;
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 20px;
+  max-width: 400px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.leaflet-popup-content-wrapper {
+  width: 400px !important;
+  overflow: hidden;
+}
+
+.leaflet-popup {
+  max-width: 450px !important;
+  padding: 0 !important;
+}
+
+.popup-header {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+}
+
+.dti-number {
+  text-align: left;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.dti-number label {
+  font-size: 14px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.dti-number input {
+  background-color: #f1f4fb;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 14px;
+  width: 65%;
+}
+
+.left-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 120px;
+}
+
+.image-upload-container {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  cursor: pointer;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #ddd;
+  margin-bottom: 10px;
+}
+
+.image-upload-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.upload-label {
+  cursor: pointer;
+}
+
+.popup-header .right-section {
+  flex-grow: 1;
+}
+
+
+.popup-container .popup-header h1 {
+  font-size: 1.5em;
+  margin-bottom: 5px;
+  color: #000;
+}
+
+.right-section .location-field,
+.right-section .description-field {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.location-field {
+  display: flex;
+  align-items: center;
+  background-color: #f1f4fb;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 8px;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.location-field i {
+  font-size: 16px;
+  color: #666;
+  margin-right: 5px;
+}
+
+.location-field input {
+  border: none;
+  background-color: transparent;
+  width: 100%;
+  font-size: 14px;
+}
+
+.description-field {
+  background-color: #f1f4fb;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 8px;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.description-field textarea {
+  width: 100%;
+  height: 30px;
+  border: none;
+  background-color: transparent;
+  font-size: 14px;
+  resize: none;
+  padding: 0;
+}
+
+.operating-hours {
+  text-align: left;
+  margin-top: 10px;
+}
+
+.operating-hours label {
+  font-size: 14px;
+}
+
+.operating-hours label:first-child {
+  font-weight: bold;
+}
+
+.operating-hours .time-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.operating-hours .time-container label {
+  width: 30%;
+  font-size: 14px;
+  margin-right: 10px;
+  font-weight: normal;
+}
+
+.operating-hours .time-container input {
+  width: 65%;
+  background-color: #f1f4fb;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 14px;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  max-height: 200px;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.carousel img {
+  width: 100%;
+  height: auto;
+}
+
+.carousel-images {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  height: 100%;
+}
+
+.carousel-images img {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 5px;
+  z-index: 1;
+}
+
+.carousel-btn.prev {
+  left: 5px;
+}
+
+.carousel-btn.next {
+  right: 5px;
+}
+
+.reserve-btn {
+  display: block;
+  width: 100%;
+  max-width: 150px;
+  padding: 10px;
+  background-color: #142850;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 16px;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.hourly-rate {
+  text-align: left;
+  margin-top: 10px;
+}
+
+.hourly-rate label {
+  font-size: 14px;
+}
+
+.hourly-rate input {
+  background-color: #f1f4fb;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 14px;
+  width: 65%;
+}
+
+.reserve-btn:hover {
+  background-color: #397CF7;
+}

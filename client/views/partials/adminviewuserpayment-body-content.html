@@ -1,0 +1,32 @@
+<body>
+  <section class="home-section">
+    <h1>User Payments</h1>
+    <div id="profileNav" class="profile-nav">
+      <a href="/user/admin/user-payments/?tab=court-reservation" class="active">Court Reservation</a>
+      <a href="/user/admin/user-payments/?tab=event-and-tournaments">Event/Tournaments</a>
+    </div>
+    <div class="box">
+      <div class="filter-container">
+        <div class="filter-actions">
+          <label for="search">Search:</label>
+          <input type="text" id="search" class="search-field" placeholder="Search by name..." />
+          <button class="filter-button">
+            Print Payment
+            <i class="fas fa-file-alt"></i>
+          </button>
+          <button id="expandButton" class="filter-button">
+            Expand Table
+            <i class="fas fa-expand"></i>
+          </button>
+        </div>
+      </div>
+
+      <table id="paymentTable">
+        <tbody>
+          <!-- Rows are injected dynamically here -->
+          <tr></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</body>

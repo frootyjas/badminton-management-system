@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
+  margin: 0;
+  margin-left: 190px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.home-section {
+  position: relative;
+  background: #fff;
+  top: 0;
+  left: 78px;
+  width: calc(100% - 78px);
+  transition: all 0.5s ease;
+  min-height: unset;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.sidebar.open ~ .home-section {
+  left: 250px;
+  width: calc(100% - 250px);
+}
+
+.box {
+  background-color: #fff;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.filter-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.filter-left {
+  font-weight: 600;
+}
+
+.filter-button {
+  padding: 10px 20px;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #eee;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.filter-button i {
+  margin-left: 5px;
+}
+
+.filter-button:hover {
+  background-color: #397cf7;
+  color: #fff;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #e0e0e0;
+}
+
+thead th {
+  padding: 10px;
+  background-color: #192850;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  border-right: 1px solid #e0e0e0;
+}
+
+thead th:last-child {
+  border-right: none;
+}
+
+tbody td {
+  padding: 10px;
+  text-align: center;
+  border-top: 1px solid #e0e0e0;
+  border-right: 1px solid #e0e0e0;
+}
+
+tbody tr td:last-child {
+  border-right: none;
+}
+
+tbody tr:last-child td {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #fff;
+}
+
+.filter-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filter-container select {
+  padding: 10px 20px;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  background-color: #eee;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+}
+
+.filter-container button {
+  margin-left: 10px;
+}
+
+.filter-container label {
+  margin-right: 10px;
+}
+
+.search-field {
+  padding: 10px 20px;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  background-color: #eee;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.search-field:focus {
+  outline-color: #000;
+}

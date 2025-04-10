@@ -1,0 +1,87 @@
+<body>
+  <section class="home-section">
+    <h1>Manage Membership</h1>
+    <div class="membership-list-container">
+      <div class="left-panel">
+        <h2>Add New Membership</h2>
+        <form class="membership-form" id="add-membership-form">
+          <label for="membership-image">Membership Image</label>
+          <input type="file" id="membership-image" name="image" accept="image/*" required />
+
+          <label for="membership-name">Membership Name</label>
+          <input type="text" id="membership-name" name="membershipName" placeholder="Enter membership name" required />
+
+          <label for="membership-stock">Membership Description</label>
+          <textarea
+            id="membership-description"
+            name="membershipDescription"
+            placeholder="Enter membership description"
+            required></textarea>
+
+          <label for="membership-price">Membership Price</label>
+          <input
+            type="number"
+            id="membership-price"
+            name="membershipPrice"
+            placeholder="Enter membership price"
+            required />
+
+          <button type="submit" id="add-membership-btn">Add membership</button>
+        </form>
+      </div>
+
+      <div class="right-panel">
+        <h2>Membership List</h2>
+        <div class="membership-list-wrapper" id="membership-list">
+          <!-- membership cards will be dynamically added here -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Subscriber Modal -->
+    <div id="subscribersModal" class="subscribers-modal">
+      <div class="subscribers-modal-content">
+        <span class="close subscriber-close" aria-label="Close">×</span>
+        <h2>Subscribers</h2>
+        <table class="subscribers-table">
+          <thead>
+            <tr>
+              <th>Username</th>
+              <th>Date Subscribed</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="subscriberTableBody">
+            <!-- Subscribers will be displayed here -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Edit membership Modal -->
+    <div id="editModal" class="modal">
+      <div class="modal-content">
+        <span class="close edit-close" aria-label="Close">×</span>
+        <h2>Edit membership</h2>
+        <label for="edit-membership-image">Membership Image</label>
+        <input type="file" id="edit-membership-image" accept="image/*" />
+
+        <label for="edit-membership-name">Membership Name</label>
+        <input type="text" id="edit-membership-name" placeholder="Enter membership name" />
+
+        <label for="membership-stock">Membership Description</label>
+        <textarea
+          id="edit-membership-description"
+          name="membershipDescription"
+          placeholder="Enter membership description"
+          required></textarea>
+
+        <label for="edit-membership-price">membership Price</label>
+        <input type="number" id="edit-membership-price" placeholder="Enter membership price" />
+
+        <button id="update-membership-btn">Update membership</button>
+      </div>
+    </div>
+  </section>
+</body>

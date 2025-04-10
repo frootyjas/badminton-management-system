@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
+  margin: 0;
+  margin-left: 190px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.home-section {
+  position: relative;
+  background: #fff;
+  top: 0;
+  left: 78px;
+  width: calc(100% - 78px);
+  transition: all 0.5s ease;
+  min-height: unset;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.sidebar.open ~ .home-section {
+  left: 250px;
+  width: calc(100% - 250px);
+}
+
+.box {
+  background-color: #fff;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.box h4 {
+  margin-bottom: 10px;
+}
+
+.settings-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.settings-field label {
+  font-size: 12px;
+  font-weight: 500;
+  color: #2e2e2e;
+}
+
+.settings-field input {
+  outline: none;
+  font-size: 14px;
+  font-weight: 400;
+  background-color: #f1f4fb;
+  color: #000;
+  border-radius: 5px;
+  border: 1px solid #f1f4fb;
+  padding: 0 15px;
+  height: 42px;
+  margin: 8px 0;
+}
+
+.settings-field input:focus {
+  border: 1px solid black;
+}
+
+.submit-button,
+.delete-button {
+  background-color: #142850;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 40%;
+}
+
+.submit-button:hover,
+.delete-button:hover {
+  background-color: #397cf7;
+}
+
+.settings-info-grid h4 {
+  font-size: 16px;
+  margin-bottom: -5px;
+  margin-top: -2px;
+}
+
+.changePassword,
+.delete-account {
+  margin-top: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  width: 35%;
+}
+
+.delete-account h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.delete-account p {
+  font-size: 14px;
+  color: #d9534f;
+  margin-bottom: 10px;
+}

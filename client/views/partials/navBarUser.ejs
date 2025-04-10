@@ -1,0 +1,36 @@
+<div class="header">
+  <div class="logo-container">
+    <a href="/user/dashboard">
+      <img src="/assets/images/new-logo.png" alt="Logo" />
+    </a>
+    <h4 class="logo-text">Bataan Badminton Portal</h4>
+  </div>
+  <div class="button-container">
+    <span class="username" id="username"></span>
+
+    <!-- Notification Bell -->
+    <div class="notification-container">
+      <button class="header-button help-button" id="notificationBell">
+        <i class="fas fa-bell"></i>
+        <span class="notification-count" id="notificationCount">0</span>
+      </button>
+
+      <!-- Notification Dropdown -->
+      <div class="notification-dropdown" id="notificationDropdown">
+        <h5>Notifications</h5>
+        <ul id="notificationList"></ul>
+        <div class="notification-footer">
+          <button id="clearNotificationsBtn" class="clear-notifications-button">Clear All</button>
+        </div>
+      </div>
+    </div>
+    <a href="/user/help">
+      <button id="helpButton" class="header-button help-button">
+        <i class="fas fa-question-circle"></i>
+      </button>
+    </a>
+    <button class="header-button logout-button" id="logoutBtn">
+      <i class="fas fa-sign-out-alt"></i>
+    </button>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+#documentLinksContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.document-section {
+  margin: 10px;
+}
+
+.document-section a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: blue;
+}
+
+.document-section a:hover {
+  text-decoration: underline;
+}

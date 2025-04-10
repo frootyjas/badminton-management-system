@@ -1,0 +1,83 @@
+<body>
+  <div class="main-content">
+    <h1>Events and Tournaments</h1>
+    <div class="filter-actions">
+      <a href="/user/announcements?tab=my-feed" class="filter-button active">My Feed</a>
+      <a href="/user/announcements?tab=schedule-reservation" class="filter-button">My Schedule</a>
+    </div>
+    <div class="container">
+      <div class="box1">
+        <div class="filter-header">Filter</div>
+        <div class="selected-filters" id="selected-filters"></div>
+        <div class="filter-section">
+          <div class="filter-header">Date Posted</div>
+          <label>
+            <input type="checkbox" value="today" />
+            Today
+          </label>
+          <label>
+            <input type="checkbox" value="this-week" />
+            This Week
+          </label>
+          <label>
+            <input type="checkbox" value="this-month" />
+            This Month
+          </label>
+        </div>
+        <div class="filter-section">
+          <div class="filter-header">Category</div>
+          <label>
+            <input type="checkbox" value="Announcement" />
+            Announcement
+          </label>
+          <label>
+            <input type="checkbox" value="Event" />
+            Event and Tournament
+          </label>
+        </div>
+
+        <div class="filter-section">
+          <div class="filter-header">Sort By</div>
+          <label>
+            <input type="checkbox" id="sort-ascending" />
+            Ascending
+          </label>
+          <label>
+            <input type="checkbox" id="sort-descending" />
+            Descending
+          </label>
+        </div>
+      </div>
+      <div class="box2">
+        <div class="box"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="joinModal" class="modal">
+    <div class="modal-content">
+      <h2>Thank you for showing your interest!</h2>
+      <p>
+        To join this tournament, you must pay a reservation to proceed with your registration. By clicking the Pay Now
+        button, you will be redirected to our partnered online payment system.
+      </p>
+
+      <div class="privacy-policy">
+        <h3>Privacy Policy</h3>
+        <p>
+          By clicking the checkbox below, you agree to the use of your personal information for the purposes of managing
+          your participation in the tournament. We are committed to protecting your privacy and will not share your
+          information with third parties without your consent.
+        </p>
+        <label class="small-checkbox">
+          <input type="checkbox" id="privacyPolicy" />
+          I agree to the Privacy Policy
+        </label>
+      </div>
+      <br />
+      <br />
+      <button id="payNowButton" disabled>Pay Now</button>
+      <button id="cancelButton">Cancel</button>
+    </div>
+  </div>
+</body>

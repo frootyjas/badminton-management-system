@@ -1,0 +1,205 @@
+<body>
+  <div id="spinner" class="spinner-modal">
+    <div class="spinner"></div>
+  </div>
+  <div class="container">
+    <h1>Court Registration</h1>
+    <div class="details-container">
+      <form id="courtRegistrationForm">
+        <div class="basic-container">
+          <h3>1. Complete Court Basic Information</h3>
+          <div class="business-container">
+            <div>
+              <label for="businessName">Business Name</label>
+              <input type="text" id="businessName" name="business_name" placeholder="Enter business name" required />
+            </div>
+            <div>
+              <label for="contactNumber">Contact Number</label>
+              <input type="tel" id="contactNumber" name="contact_number" placeholder="Enter contact number" required />
+            </div>
+            <div>
+              <label for="businessEmail">Business Email</label>
+              <input
+                type="email"
+                id="businessEmail"
+                name="business_email"
+                placeholder="Enter business email"
+                required />
+            </div>
+            <div>
+              <label for="operatingHoursFrom">Operating Hours (From)</label>
+              <input type="time" id="operatingHoursFrom" name="operating_hours_from" required />
+            </div>
+            <div>
+              <label for="operatingHoursTo">Operating Hours (To)</label>
+              <input type="time" id="operatingHoursTo" name="operating_hours_to" required />
+            </div>
+            <div>
+              <label for="fee">Hourly Rate (PHP)</label>
+              <input type="number" id="fee" name="hourly_rate" placeholder="Enter rate per hour" required />
+            </div>
+            <div class="payemail-section">
+              <label for="payEmail">PayPal Email</label>
+              <input type="email" id="payEmail" name="paypal_email" placeholder="Enter your PayPal email" required />
+              <small>This email will be used to send payments via PayPal.</small>
+            </div>
+            <div>
+              <label for="dtiNumber">DTI Registration Number</label>
+              <input 
+                type="text" 
+                id="dtiNumber" 
+                name="dti_number" 
+                placeholder="Enter DTI registration number" 
+                required 
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="pin-container">
+          <h3>2. Upload Business Logo and Description</h3>
+          <div class="pin-grid">
+            <!-- Image Upload Section -->
+            <label for="pin-image-upload" class="upload-label">
+              <div class="image-upload-container">
+                <img id="pin-preview" src="/assets/images/logo_placeholder_120x120.png" alt="Upload Business Logo" />
+                <input type="file" id="pin-image-upload" name="business_logo" accept="image/*" />
+              </div>
+            </label>
+            <!-- Description Section -->
+            <div class="pin-description">
+              <label for="pin-description-textarea">Tell us about your court</label>
+              <textarea
+                name="description"
+                id="pin-description-textarea"
+                rows="4"
+                placeholder="Enter a description"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="courts-container">
+          <h3 style="display: inline-block">3. Upload Available Court Images</h3>
+          <button type="button" class="add-court-btn">+ Add More Court</button>
+          <div class="courts-grid" id="courtsGrid">
+            <!-- Court 1 (initial court) -->
+            <div class="court-wrapper" id="courtWrapper1">
+              <div class="court" id="court1">
+                <button class="remove-court-btn">×</button>
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/724/724933.png"
+                  alt="Upload Court"
+                  id="courtImage1"
+                  class="image-holder default" />
+                <input type="file" id="courtUpload1" name="court_image[]" class="court-file-input" />
+              </div>
+              <div class="court-number" id="courtNumber1">Court 1</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="facilities-container">
+          <h3 style="display: inline-block">4. Upload Available Facility Images</h3>
+          <button type="button" class="add-facility-btn">+ Add More Facility</button>
+          <div class="facilities-grid" id="facilitiesGrid">
+            <!-- Facility 1 (initial facility) -->
+            <div class="facility-wrapper" id="facilityWrapper1">
+              <div class="court" id="court1">
+                <button class="remove-facility-btn">×</button>
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/724/724933.png"
+                  alt="Upload Facility"
+                  id="facilityImage1"
+                  class="image-holder default" />
+                <input type="file" id="facilityUpload" name="facility_image[]" class="facility-file-input" />
+              </div>
+              <input type="text" name="facility_name[]" placeholder="Enter facility Name" required />
+            </div>
+          </div>
+        </div>
+
+        <div id="map-container">
+          <h3>5. Pin Point Your Court Location</h3>
+          <div id="map" style="height: 400px"></div>
+          <button id="confirmLocation" class="btn-confirm">✓ Confirm Location</button>
+        </div>
+
+        <input type="hidden" id="courtLat" name="court_latitude" />
+        <input type="hidden" id="courtLng" name="court_longitude" />
+
+        <div class="files-container">
+          <h3>6. Upload All Required Business Documents</h3>
+          <div class="file-upload-grid">
+            <div class="file-input">
+              <label for="businessPermit">Business Permit (from City Hall)</label>
+              <div class="custom-file-upload">
+                <span class="upload-icon"></span>
+                <input
+                  type="file"
+                  id="businessPermit"
+                  name="documents[business_permit]"
+                  name="businessPermit"
+                  required />
+                <span>No file chosen</span>
+              </div>
+            </div>
+            <div class="file-input">
+              <label for="dti">Certificate of Business Name Registration (from DTI)</label>
+              <div class="custom-file-upload">
+                <span class="upload-icon"></span>
+                <input type="file" id="dti" name="documents[dti]" required />
+                <span>No file chosen</span>
+              </div>
+            </div>
+            <div class="file-input">
+              <label for="bir">Certificate of Registration (from BIR)</label>
+              <div class="custom-file-upload">
+                <span class="upload-icon"></span>
+                <input type="file" id="bir" name="documents[bir]" required />
+                <span>No file chosen</span>
+              </div>
+            </div>
+            <div class="file-input">
+              <label for="sanitaryPermit">Sanitary Permit (from City Health Office)</label>
+              <div class="custom-file-upload">
+                <span class="upload-icon"></span>
+                <input
+                  type="file"
+                  id="sanitaryPermit"
+                  name="documents[sanitary_permit]"
+                  name="sanitaryPermit"
+                  required />
+                <span>No file chosen</span>
+              </div>
+            </div>
+            <div class="file-input">
+              <label for="barangayClearance">Barangay Clearance</label>
+              <div class="custom-file-upload">
+                <span class="upload-icon"></span>
+                <input type="file" id="barangayClearance" name="documents[barangay_clearance]" required />
+                <span>No file chosen</span>
+              </div>
+            </div>
+            <div class="file-input">
+              <label for="nonCoverage">Certificate of Non-Coverage (from DENR)</label>
+              <div class="custom-file-upload">
+                <span class="upload-icon"></span>
+                <input type="file" id="nonCoverage" name="documents[non_coverage]" required />
+                <span>No file chosen</span>
+              </div>
+            </div>
+            <div class="file-input">
+              <label for="doleRegistration">Certificate of Registration (from DOLE)</label>
+              <div class="custom-file-upload">
+                <span class="upload-icon"></span>
+                <input type="file" id="doleRegistration" name="documents[dole_registration]" required />
+                <span>No file chosen</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button type="submit" id="submitBtn" class="submit">Register</button>
+      </form>
+    </div>
+  </div>
+</body>

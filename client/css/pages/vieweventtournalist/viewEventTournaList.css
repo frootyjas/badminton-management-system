@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
+  margin: 0;
+  margin-left: 190px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.home-section {
+  position: relative;
+  background: #fff;
+  top: 0;
+  left: 78px;
+  width: calc(100% - 78px);
+  transition: all 0.5s ease;
+  min-height: unset;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.sidebar.open ~ .home-section {
+  left: 250px;
+  width: calc(100% - 250px);
+}
+
+.box {
+  background-color: #fff;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  gap: 8px;
+}
+
+.stat-box {
+  background-color: #eee;
+  border: 1px solid #eee;
+  border-left: 5px solid transparent;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: left;
+  width: 22%;
+  color: #333;
+  height: 100px;
+}
+
+.stat-box:nth-child(1) {
+  border-left-color: #007bff;
+}
+
+.stat-box:nth-child(2) {
+  border-left-color: #28a745;
+}
+
+.stat-box:nth-child(3) {
+  border-left-color: #ffc107;
+}
+
+.stat-box:nth-child(4) {
+  border-left-color: #dc3545;
+}
+
+.stat-box i {
+  font-size: 55px;
+  color: #000;
+  margin-right: 15px;
+}
+
+.stat-box-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-box h3 {
+  font-size: 14px;
+  margin: 0;
+  font-weight: 300;
+}
+
+.stat-box span {
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+.content-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.events,
+.tournaments {
+  width: 48%;
+}
+
+.content-section h2 {
+  font-size: 18px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.content-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.content-list li {
+  background-color: #fff;
+  margin-bottom: 8px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  color: #333;
+  height: 50px;
+}
+
+.content-list li span {
+  background-color: inherit;
+  color: #fff;
+  width: 40px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.content-list li.event-number span {
+  background-color: #142850;
+}
+
+.content-list li.tournament-number span {
+  background-color: #142850;
+}
+
+.content-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+  padding-left: 10px;
+}
+
+.content-details div {
+  display: flex;
+  flex-direction: column;
+}
+
+.content-details strong {
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+
+.view-more-btn {
+  background-color: #192850;
+  border: none;
+  border-radius: 5px;
+  padding: 6px 12px;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 12px;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.view-more-btn.event {
+  background-color: #142850;
+}
+
+.view-more-btn.tournament {
+  background-color: #142850;
+}
+
+.view-more-btn:hover {
+  background-color: #397cf7;
+}
+
+.content-details a,
+.content-details button {
+  text-decoration: none;
+}
+
+.posted-date {
+  font-size: 12px;
+  color: #888;
+  margin: 0;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .stats-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stat-box {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .content-section {
+    flex-direction: column;
+  }
+
+  .events,
+  .tournaments {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
